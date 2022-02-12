@@ -12,10 +12,13 @@ const UseEffectBasics = () => {
   });
 
   console.log('render component');
+
+  // The above console.log rerenders every time, because useState is triggering re-render which also causes useEffect to also re-render
+
   return (
     <>
       <h1>{value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
+      <button className="btn" onClick={() => setValue(value + 1)}>
         click me
       </button>
     </>

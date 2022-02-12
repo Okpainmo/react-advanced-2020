@@ -1,0 +1,131 @@
+/* custom variables */
+
+:root {
+  --custom-pink: #f28ab2;
+  --card-title: rgb(41, 40, 40);
+  --card-text: rgb(88, 87, 87);
+}
+
+/* css global resets*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(208, 237, 245);
+}
+
+/* other styling */
+
+.parent-wrapper {
+  width: 100%;
+  margin: 80px auto;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); */
+}
+
+.app-header {
+  margin: 12px 0 30px;
+}
+
+.card {
+  display: flex;
+  margin: 15px;
+  background-color: white;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-case {
+  width: 55px;
+  height: 55px;
+}
+
+.card-image-case img {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 7px 14px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card-body .card-title {
+  color: var(--card-title);
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.card-body .card-text {
+  font-size: 11px;
+  color: var(--card-text);
+  text-align: left;
+}
+
+.remove-item-btn {
+  font-size: 12px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.remove-item-btn:hover {
+  cursor: pointer;
+}
+
+.clear-btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--custom-pink);
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 30px 50px;
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    padding: 30px;
+  }
+  .parent-wrapper {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .container {
+    width: initial;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+  .parent-wrapper {
+    width: 100%;
+    padding: 15px 0;
+  }
+  .card-text {
+    overflow-x: auto;
+    width: 95px;
+  }
+}

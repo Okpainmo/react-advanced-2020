@@ -14,17 +14,17 @@ const ReactRouterSetup = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path='/about'>
+        <Route path="/about">
           <About />
         </Route>
-        <Route path='/people'>
+        <Route path="/people">
           <People />
         </Route>
-        <Route path='/person/:id' children={<Person />}></Route>
-        <Route path='*'>
+        <Route path="/person/:id" children={<Person />}></Route>
+        <Route path="*">
           <Error />
         </Route>
       </Switch>
