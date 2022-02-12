@@ -3,10 +3,20 @@ import { data } from '../../../data';
 const UseStateArray = () => {
   const [people, setPeople] = React.useState(data);
 
+  // const removeItem = (id) => {
+  //   let newPeople = people.filter((person) => person.id !== id);
+  //   setPeople(newPeople);
+  // };
+
+  // or
+
   const removeItem = (id) => {
-    let newPeople = people.filter((person) => person.id !== id);
-    setPeople(newPeople);
+    setPeople((oldPeople) => {
+      let newPeople = oldPeople.filter((person) => person.id !== id);
+      return newPeople;
+    });
   };
+
   return (
     <>
       {people.map((person) => {

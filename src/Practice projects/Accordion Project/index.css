@@ -1,0 +1,109 @@
+/* custom variables */
+
+:root {
+  --custom-color: #4f3370;
+  --card-title: rgb(41, 40, 40);
+  --card-text: rgb(88, 87, 87);
+}
+
+/* css global resets*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--custom-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* other styling */
+
+.parent-container {
+  width: 70vw;
+  min-height: 500px;
+  margin: 80px auto;
+  padding: 10px 30px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  margin: 12px 0 30px;
+  padding: 30px 0;
+  width: 25%;
+}
+
+.issues-section {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 10px;
+  width: 65%;
+}
+
+.custom-issues-card {
+  width: 100%;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.4);
+}
+
+.custom-issues-card h4 {
+  margin: 0;
+  padding: 7px;
+}
+
+.card-body {
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.card-body .card-title-block {
+  color: var(--card-title);
+  font-size: 16px;
+  margin-bottom: 7px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expand-btn-case {
+  text-align: center;
+  padding: 0 7px;
+}
+.expand-btn-case .toggle-btn {
+  background-color: #e9e5ee;
+  color: rgb(177, 32, 88);
+  border: none;
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+}
+
+.card-body .card-text {
+  font-size: 15px;
+  color: var(--card-text);
+  padding: 0 7px;
+  /* display: none; */
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    padding: 30px;
+  }
+  .parent-wrapper {
+    width: 100%;
+  }
+}
